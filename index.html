@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Github REC</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="bower_components/octicons//octicons/octicons.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <span class="header-left">
+
+        <a href="">
+          <span class="header octicon octicon-mark-github"></span>
+        </a>
+
+
+        <input type="search" value="" placeholder="Search GitHub" class="search-input" />
+
+        <span>
+          <ul class="left-links">
+            <a href="">
+              <li>Explore</li>
+            </a>
+            <a href="">
+              <li>Gist</li>
+            </a>
+            <a href="">
+              <li>Blog</li>
+            </a>
+            <a href="">
+              <li>Help</li>
+            </a>
+          </ul>
+        </span>
+      </span>
+      <span class="header-right">
+        <span class="right-header-user-info">
+          <img src="images/small-user-icon.jpeg" />
+          <a href="">
+            <span>pwerner2</span>
+          </a>
+        </span>
+        <span class="header-right-icons">
+          <a href="">
+            <span>
+              <span class="octicon octicon-plus"></span>
+              <span class="octicon octicon-triangle-down"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="octicon octicon-inbox"></span>
+          </a>
+          <a href="">
+            <span class="octicon octicon-gear"></span>
+          </a>
+          <a href="">
+            <span class="octicon octicon-sign-in"></span>
+          </a>
+        </span>
+      </span>
+    </div>
+  </header>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+
+  <div class="body-container">
+
+    <div class="user-container">
+
+      <script type="text/template" class="user-info">
+
+        <div class="avatar-info-container">
+
+          <span class="avatar-img">
+            <a href="<%= html_url %>">
+              <img src="<%= avatar_url %>" />
+            </a>
+          </span>
+
+          <span class="user-name">
+            <%=name %>
+          </span>
+
+          <span class="user-login-name">
+            <%=login %>
+          </span>
+
+        </div>
+
+
+        <div class="user-info-details-container">
+          <div>
+            <span class="octicon octicon-organization"></span>
+            <%=company %>
+          </div>
+          <div>
+            <span class="octicon octicon-location"></span>
+            <%=location %>
+          </div>
+          <div>
+            <span class="octicon octicon-mail"></span>
+            <a href="mailto:<%=email %>">
+              <%=email %>
+            </a>
+          </div>
+          <div>
+            <span class="octicon octicon-link"></span>
+            <a href="<%=blog %>">
+              <%=blog %>
+            </a>
+          </div>
+          <div class="createdAt">
+            <span class="octicon octicon-clock"></span>Joined on
+            <%=created_at %>
+          </div>
+        </div>
+
+
+        <div class="small-user-info-container">
+
+          <div class="info-container-data">
+            <a href="">
+              <span>
+                <%=followers %>
+              </span>
+            </a>
+            <span class="title">Followers</span>
+          </div>
+
+          <div class="info-container-data">
+            <a href="">
+              <span class="star-count"></span>
+            </a>
+            <span class="title">Starred</span>
+          </div>
+
+          <div class="info-container-data">
+            <a href="">
+              <span>
+                <%=following %>
+              </span>
+            </a>
+            <span class="title">Following</span>
+          </div>
+
+        </div>
+
+        <div class="orgs">
+          <h4>Organizations</h4>
+          <img src="<%= orgsAvatarUrl %>" />
+        </div>
+
+    </div>
+
+    </script>
+
+  </div>
+
+  <div class="repositories-section">
+
+    <ul class="nav-links">
+      <li>
+        <span class="octicon octicon-diff-added"></span>
+        Contributions
+      </li>
+      <li>
+        <a href="#">
+          <span class="octicon octicon-repo-pull"></span>
+          Repositories
+        </a>
+      </li>
+      <li>
+        <span class="octicon octicon-rss"></span>
+        Public Activity
+      </li>
+      <li>
+        <a href="https://github.com/settings">
+          <button>
+            <span class="octicon octicon-pencil"></span>
+            Edit Profile
+          </button>
+        </a>
+      </li>
+    </ul>
+
+    <div class="repo-link-container">
+      <input type="search" value="" placeholder="Find a repository" class="repo-search-input" />
+      <button type="submit" id="repo-search-button">
+        Search
+      </button>
+      <ul class="repo-links-list">
+        <a href="">
+          <li>All</li>
+        </a>
+        <a href="">
+          <li>Public</li>
+        </a>
+        <a href="">
+          <li>Private</li>
+        </a>
+        <a href="">
+          <li>Sources</li>
+        </a>
+        <a href="">
+          <li>Forks</li>
+        </a>
+        <a href="">
+          <li>Mirrors</li>
+        </a>
+      </ul>
+      <a href="https://github.com/new">
+        <button type="submit" id="repo-new-button">
+          <span class="octicon octicon-repo-pull"></span>
+          New
+        </button>
+      </a>
+    </div>
+
+    <ul class="repo-container"></ul>
+
+    <script type="text/template" class="repo-info">
+
+      <li>
+        <div>
+          <a href="<%= html_url %>">
+            <%=name %>
+          </a>
+          <span class="language-etc">
+            <span class="repo-tiny-info">
+              <%=language %>
+            </span>
+
+            <a href="<%=html_url%>/stargazers" class="tiny-links">
+              <span class="octicon octicon-star">
+                <span class="repo-tiny-info">
+                  <%=stargazers_count %>
+                </span>
+            </a>
+
+            <a href="<%= html_url%>/network" class="tiny-links">
+              <span class="octicon octicon-git-branch"></span>
+              <span class="repo-tiny-info">
+                <%=forks_count %>
+                  <span>
+            </a>
+            </span>
+        </div>
+
+        <span class="updated">Updated
+          <%=updated_at %>
+        </span>
+
+
+      </li>
+
+    </script>
+
+  </div>
+
+  </div>
+
+  <script src="token.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+
+</body>
+
+</html>

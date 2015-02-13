@@ -1,0 +1,410 @@
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: Helvetica, arial;
+
+}
+
+.octicon.octicon-mark-github {
+  color: #333;
+
+  &:hover {
+    color: #3782c3;
+  }
+
+}
+
+.header-container {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 10px;
+  width: 985px;
+  height: 28px;
+
+}
+
+.body-container {
+  margin: 20px auto 0;
+  width: 985px;
+}
+
+.user-container {
+  display: inline-block;
+  padding: 10px;
+  padding-left: 0;
+  vertical-align: top;
+
+}
+
+.user-info-details-container {
+  padding-top: 15px;
+
+  div {
+    display: block;
+    padding: 6px 0 2px;
+    font-size: 14px;
+  }
+
+  span {
+    width: 23px;
+    color: #ccc;
+  }
+
+}
+
+.small-user-info-container {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+
+}
+
+.repo-tiny-info {
+  padding: 0 3px;
+  font-size: 12px;
+  font-weight: bold;
+
+}
+
+.tiny-links {
+  text-decoration: none;
+
+}
+
+.info-container-data {
+  display: inline-block;
+
+  .info-container-data .title {
+    color: #999;
+    font-size: 11px;
+    font-weight: 300;
+
+}
+
+  &:first-child {
+    margin-right: 30px;
+
+  }
+
+  &:nth-child(3) {
+    margin-left: 30px;
+
+  }
+
+  span {
+    display: block;
+    color: #4183c4;
+    font-size: 28px;
+    font-weight: bold;
+
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+
+.createdAt {
+
+  padding-bottom: 15px;
+
+}
+
+.repositories-section {
+  display: inline-block;
+  width: 74%;
+
+  div {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+}
+
+.repo-container {
+  padding-left: 0;
+
+  .repo-container li {
+    position: relative;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+    list-style: none;
+
+  .updated {
+    display: block;
+    color: #888;
+    font-size: 13px;
+  }
+
+  .language-etc {
+    float: right;
+    color: #888;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+    color: #4183c4;
+    font-size: 20px;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}
+}
+
+
+.repo-links-list {
+  display: inline-block;
+  margin: 0;
+  margin-left: 30px;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    padding-right: 6px;
+    text-decoration: none;
+    color: #4183c4;
+    font-size: 14px;
+  }
+
+}
+
+.repo-link-container {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+
+}
+
+.repo-search-input {
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 7px 8px;
+  width: 260px;
+  min-height: 34px;
+  -webkit-appearance: none;
+
+}
+
+#repo-search-button {
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  cursor: pointer;
+  padding: 7px 12px;
+  min-height: 34px;
+  font-size: 13px;
+  font-weight: 600;
+
+}
+
+#repo-new-button {
+  float: right;
+  transform: translateY(5%);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  border-color: #5ca941;
+  background-image: linear-gradient(#8add6d, #60b044);
+  cursor: pointer;
+  padding: 8px 11px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+
+}
+
+.avatar-img img {
+  display: inline-block;
+  border-radius: 6px;
+  width: 230px;
+
+}
+
+header {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 49px;
+
+}
+
+.header-right {
+  position: absolute;
+  right: 0;
+
+}
+
+.header-right-icons a > span {
+  padding: 4px 8px;
+  color: #333;
+
+  &:hover {
+    color: #3782c3;
+  }
+
+}
+
+.header-right-icons a {
+  text-decoration: none;
+
+}
+
+.nav-links {
+  margin: 0 0 15px;
+  border: 100px solid black;
+  padding: 0;
+  list-style: none;
+}
+
+  li {
+    display: inline-block;
+
+    padding: 8px 12px 7px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+    text-decoration: none;
+    border-bottom: solid 1px #e5e5e5;
+    &:active {
+      border-bottom: 1px solid transparent;
+    }
+
+    &:nth-child(2) {
+      border-top: solid 1px #e5e5e5;
+      border-left: solid 1px #e5e5e5;
+      border-right: solid 1px #e5e5e5;
+      border-radius: 3px 3px 0 0;
+      
+      a {
+
+        text-decoration: none;
+        color: #333;
+      }
+
+    }
+
+    &:nth-child(4) {
+      float: right;
+      padding-right: 0;
+      border-bottom: none;
+      button {
+        background: linear-gradient(to bottom, #ffffff, #e8e8e8);
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        color: #333;
+        font-size: 13px;
+        font-weight: 600;
+        text-shadow: 0 1px 0 #f5f5f5;
+        line-height: 25px;
+        padding: 0 10px;
+        cursor: pointer;
+        transform: translateY(-10%);
+      }
+    }
+  }
+
+
+.left-links {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 8px;
+
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+    &:hover {
+      color: #3782c3;
+    }
+  }
+
+}
+
+.right-header-user-info {
+
+  img {
+    width: 21px;
+    vertical-align: middle;
+
+  }
+
+  span {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+
+    &:hover {
+      color: #3782c3;
+    }
+
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+.octicon.octicon-triangle-down:before {
+  font-size: 10px;
+
+}
+
+.octicon.octicon-mark-github {
+  font-size: 28px;
+  vertical-align: middle;
+
+}
+
+.search-input {
+  width: 360px;
+  min-height: 28px;
+  padding: 4px 20px 4px 8px;
+  font-size: 12px;
+  -webkit-appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+
+}
+
+.orgs img {
+  width: 42px;
+
+}
+
+.user-name {
+  display: block;
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 5px;
+
+}
+
+.user-login-name {
+  display: block;
+  font-size: 20px;
+  font-weight: 300;
+  color: #666;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
